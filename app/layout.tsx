@@ -1,3 +1,5 @@
+import { Container } from '../components/container';
+import { Header } from '../components/header';
 import '../styles/globals.css';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -10,7 +12,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body>
-        <div>{children}</div>
+        <div>
+          <Header />
+          <main className='pt-[--var(navigation-height)]'>{children}</main>
+          <footer>
+            <Container>Footer</Container>
+          </footer>
+        </div>
       </body>
     </html>
   );
