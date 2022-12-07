@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <div>
           <Header />
-          <main className='pt-[--var(navigation-height)]'>{children}</main>
+          <main className='pt-[48px]'>{children}</main>
           <footer>
             <Container>Footer</Container>
           </footer>

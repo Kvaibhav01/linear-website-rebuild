@@ -5,6 +5,7 @@ specifiers:
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.12
+  class-variance-authority: ^0.4.0
   classnames: ^2.3.2
   next: ^13.0.6
   postcss: ^8.4.18
@@ -14,6 +15,7 @@ specifiers:
   typescript: 4.8.4
 
 dependencies:
+  class-variance-authority: 0.4.0_typescript@4.8.4
   classnames: 2.3.2
   next: 13.0.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -296,6 +298,17 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /class-variance-authority/0.4.0_typescript@4.8.4:
+    resolution: {integrity: sha512-74enNN8O9ZNieycac/y8FxqgyzZhZbxmCitAtAeUrLPlxjSd5zA7LfpprmxEcOmQBnaGs5hYhiSGnJ0mqrtBLQ==}
+    peerDependencies:
+      typescript: '>= 4.5.5 < 5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 4.8.4
+    dev: false
 
   /classnames/2.3.2:
     resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
@@ -778,7 +791,6 @@ packages:
     resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /update-browserslist-db/1.0.10_browserslist@4.21.4:
     resolution: {integrity: sha512-OztqDenkfFkbSG+tRxBeAnCVPckDBcvibKd35yDONx6OU8N7sqgwc7rCbkJ/WcYtVRZ4ba68d6byhC21GFh7sQ==}
