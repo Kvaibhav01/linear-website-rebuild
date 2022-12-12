@@ -1,4 +1,5 @@
 import { Container } from '../components/container';
+import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import '../styles/globals.css';
 
@@ -15,9 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div>
           <Header />
           <main className='pt-navigation-height'>{children}</main>
-          <footer>
-            <Container>Footer</Container>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
