@@ -52,10 +52,10 @@ export const Footer = () => (
     <Container className='flex flex-col md:flex-row justify-between'>
       <div>
         <div className='flex h-full flex-row justify-between lg:flex-col'>
-          <div className='text-gray flex items-center'>
+          <div className='text-grey flex items-center'>
             <Logo className='w-4 h-4 mr-4' /> Linear - Designed Worldwide
           </div>
-          <div className='mt-auto flex space-x-4 text-gray'>
+          <div className='mt-auto flex space-x-4 text-grey'>
             <TwitterIcon />
             <GithubIcon />
             <SlackIcon />
@@ -69,7 +69,10 @@ export const Footer = () => (
             <ul>
               {column.links.map((link) => (
                 <li className='[&_a]:last:mb-0'>
-                  <Link href={link.href} className='text-gray mb-3 block'>
+                  <Link
+                    href={link.href}
+                    className='text-grey hover:text-white transition-colors mb-3 block'
+                  >
                     {link.title}
                   </Link>
                 </li>

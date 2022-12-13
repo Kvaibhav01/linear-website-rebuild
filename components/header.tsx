@@ -2,7 +2,7 @@
 
 import classNames from 'classnames';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from './button';
 import { Container } from './container';
 import { HamburgerIcon } from './icons/hamburger';
@@ -10,6 +10,24 @@ import { Logo } from './icons/logo';
 
 export const Header = () => {
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
+
+  useEffect(() => {
+    const html = document.querySelector('html');
+
+    if (html) html.classList.toggle('overflow-hidden', hamburgerMenuIsOpen);
+  }, [hamburgerMenuIsOpen]);
+
+  useEffect(() => {
+    const closeHamburgerNav = () => setHamburgerMenuIsOpen(false);
+
+    window.addEventListener('orientationchange', closeHamburgerNav);
+    window.addEventListener('resize', closeHamburgerNav);
+
+    return () => {
+      window.removeEventListener('orientationchange', closeHamburgerNav);
+      window.removeEventListener('resize', closeHamburgerNav);
+    };
+  }, [setHamburgerMenuIsOpen]);
 
   return (
     <header className='fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[120px]'>
@@ -24,7 +42,6 @@ export const Header = () => {
           )}
         >
           <nav
-            // TODO: Check for hover classes and mobile breakpoint font size
             className={classNames(
               'fixed top-navigation-height left-0 h-[calc(100vh_-_var(--navigation-height))] w-full overflow-auto bg-background transition-opacity duration-500 md:relative md:top-0 md:block md:h-auto md:w-auto md:translate-x-0 md:overflow-hidden md:bg-transparent md:opacity-100 md:transition-none',
               hamburgerMenuIsOpen
