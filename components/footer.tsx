@@ -48,7 +48,7 @@ const footerLinks = [
 ];
 
 export const Footer = () => (
-  <footer className='border-t border-white-a08 py-[5.6rem] mt-12 text-sm'>
+  <footer className='border-t border-transparent-white py-[5.6rem] mt-12 text-md'>
     <Container className='flex flex-col md:flex-row justify-between'>
       <div>
         <div className='flex h-full flex-row justify-between lg:flex-col'>
@@ -71,7 +71,7 @@ export const Footer = () => (
                 <li className='[&_a]:last:mb-0'>
                   <Link
                     href={link.href}
-                    className='text-grey hover:text-white transition-colors mb-3 block'
+                    className='text-grey hover:text-offWhite transition-colors mb-3 block'
                   >
                     {link.title}
                   </Link>
