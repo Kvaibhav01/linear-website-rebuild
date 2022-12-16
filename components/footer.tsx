@@ -71,7 +71,7 @@ export const Footer = () => (
                 <li className='[&_a]:last:mb-0'>
                   <Link
                     href={link.href}
-                    className='text-grey hover:text-offWhite transition-colors mb-3 block'
+                    className='text-grey hover:text-off-white transition-colors mb-3 block'
                   >
                     {link.title}
                   </Link>

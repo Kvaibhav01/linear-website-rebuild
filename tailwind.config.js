@@ -38,6 +38,8 @@ module.exports = {
         'linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)',
       'page-gradient':
         'radial-gradient(ellipse 50% 80% at 20% 40%,rgba(93,52,221,0.1),transparent), radial-gradient(ellipse 50% 80% at 80% 50%,rgba(120,119,198,0.15),transparent)',
+      'hero-gradient':
+        'radial-gradient(ellipse 50% 80% at 20% 40%,rgba(93,52,221,0.1),transparent), radial-gradient(ellipse 50% 80% at 80% 50%,rgba(120,119,198,0.15),transparent)',
     },
     boxShadow: {
       primary: 'rgb(80 63 205 / 50%) 0px 1px 40px',
@@ -57,6 +59,18 @@ module.exports = {
       11: '4.4rem',
       12: '4.8rem',
       'navigation-height': 'var(--navigation-height)',
+    },
+    transitionDelay: {
+      0: '0ms',
+    },
+    keyframes: {
+      'fade-in': {
+        from: { opacity: 0, transform: 'translateY(-10px)' },
+        to: { opacity: 1, transform: 'none' },
+      },
+    },
+    animation: {
+      'fade-in': 'fade-in 1000ms var(--animation-delay, 0ms) ease forwards',
     },
   },
   plugins: [],
