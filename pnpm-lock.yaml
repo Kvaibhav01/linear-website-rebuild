@@ -4,17 +4,17 @@ specifiers:
   '@types/node': 18.11.3
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
-  autoprefixer: ^10.4.12
+  autoprefixer: ^10.4.13
   class-variance-authority: ^0.4.0
   classnames: ^2.3.2
   next: ^13.0.6
-  postcss: ^8.4.18
+  postcss: ^8.4.19
   prettier: ^2.8.1
   prettier-plugin-tailwindcss: ^0.2.0
   react: 18.2.0
   react-dom: 18.2.0
   react-intersection-observer: ^9.4.1
-  tailwindcss: ^3.2.1
+  tailwindcss: ^3.2.4
   typescript: 4.8.4
 
 dependencies:

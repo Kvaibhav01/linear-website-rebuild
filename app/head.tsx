@@ -3,10 +3,10 @@ export default function Head() {
     <>
       <title>Linear - Rebuild</title>
       <meta
-        name='description'
+        name="description"
         content="Rebuilding Linear.app's website with Next.js, Tailwind and Framer Motion."
       />
-      <meta name='robots' content='noindex' />
+      <meta name="robots" content="noindex" />
     </>
   );
 }
