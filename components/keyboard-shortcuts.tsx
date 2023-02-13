@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Button, Highlight } from "./button";
 import { KeyboardIllustration } from "./illustrations/keyboard";
 
@@ -97,7 +97,7 @@ export const KeyboardShortcuts = () => {
               variant="secondary"
             >
               <Highlight className="uppercase">{shortcut.keys}</Highlight>
-              {shortcut.text}
+              <span>{shortcut.text}</span>
             </Button>
           ))}
         </div>

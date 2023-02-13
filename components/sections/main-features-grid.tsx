@@ -1,7 +1,7 @@
 import { Button, Highlight } from "../button";
 import { Container } from "../container";
-import { BoltIllustration } from "../illustrations/bolt";
 import { LogoLightIllustration } from "../illustrations/logo-light";
+import { BoltIllustration } from "../illustrations/bolt";
 import { KeyboardShortcuts } from "../keyboard-shortcuts";
 
 export const MainFeaturesGrid = () => (
