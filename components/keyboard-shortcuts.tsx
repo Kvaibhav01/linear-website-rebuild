@@ -5,7 +5,7 @@ import { KeyboardIllustration } from "./illustrations/keyboard";
 
 const shortcuts = [
   { text: "Opens command line", keys: "⌘k" },
-  { text: "Assign issue to me", keys: "i" },
+  { text: "Assign issue to me", keys: "i" }, 
   { text: "Assign issue to", keys: "a" },
   { text: "Change issue status", keys: "s" },
   { text: "Set issue priority", keys: "p" },
