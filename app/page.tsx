@@ -1,9 +1,12 @@
 import classNames from "classnames";
 import { Container } from "../components/container";
 import { StarsIllustration } from "../components/logos/stars";
+import { BuildMomentum } from "../components/sections/build-momentum";
 import { Clients } from "../components/sections/clients";
+import { EnjoyIssueTracking } from "../components/sections/enjoy-issue-tracking";
 import { HomePageHero } from "../components/sections/homepage-hero";
 import { MainFeaturesGrid } from "../components/sections/main-features-grid";
+import { SetDirection } from "../components/sections/set-direction";
 
 export default function Homepage() {
   return (
@@ -26,6 +29,9 @@ export default function Homepage() {
         <StarsIllustration />
       </div>
       <MainFeaturesGrid />
+      <EnjoyIssueTracking />
+      <BuildMomentum />
+      <SetDirection />
     </>
   );
 }

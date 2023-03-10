@@ -1,23 +1,23 @@
 "use client";
 
 import classNames from "classnames";
-import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  AddLabels,
   AssignToIcon,
   BacklogIcon,
-  NoPriorityIcon,
   ChangePriorityIcon,
   ChangeStatusIcon,
   DoneIcon,
+  HighIcon,
   InProgressIcon,
   LabelIcon,
+  LowIcon,
+  MediumIcon,
+  NoPriorityIcon,
   PersonIcon,
   TodoIcon,
   UrgentIcon,
-  HighIcon,
-  MediumIcon,
-  LowIcon,
-  AddLabels,
 } from "./icons/command-bar";
 
 const commandOptions = [
@@ -66,6 +66,7 @@ export const CommandMenu = () => {
   const [opened, setOpened] = useState(false);
   const [selectedOption, setSetSelectedOption] = useState<number | null>(null);
   const commandMenuRef = useRef<HTMLDivElement>(null);
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     const toggleCommandMenu = (e: MouseEvent) => {
@@ -78,6 +79,7 @@ export const CommandMenu = () => {
       const clickedOutside =
         !isMenuButton && !commandMenuRef.current?.contains(e.target as Node);
       setOpened(clickedOutside ? false : true);
+      if (clickedOutside) setSearchValue("");
     };
 
     window.addEventListener("click", toggleCommandMenu);
@@ -93,8 +95,14 @@ export const CommandMenu = () => {
         ? commandOptions
         : commandOptions[selectedOption].subOptions;
 
-    return options;
-  }, [selectedOption]);
+    // If no search value is provided, we return all options.
+    if (searchValue === "") return options;
+
+    // If a search value is provided, we do a simple search based on that input.
+    return [...options].filter((option) =>
+      option.label.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }, [selectedOption, searchValue]);
 
   useEffect(() => {
     if (!commandMenuRef.current) return;
@@ -121,6 +129,8 @@ export const CommandMenu = () => {
         <input
           placeholder="Type a command or search..."
           className="w-full bg-transparent p-5 text-lg outline-none"
+          value={searchValue}
+          onChange={(ev) => setSearchValue(ev.target.value)}
         />
         <div className="flex w-full flex-col text-sm text-off-white">
           {currentOptions.map(({ label, icon: Icon, ...menuItem }, index) => (
@@ -129,6 +139,7 @@ export const CommandMenu = () => {
               onClick={(e) => {
                 const clickedRootItem = "subOptions" in menuItem;
                 setSetSelectedOption(clickedRootItem ? index : null);
+                setSearchValue("");
                 if (!clickedRootItem) {
                   setOpened(false);
                   // Stop the event from bubbling up to not trigger `toggleCommandMenu`. Else it will open the menu again.
