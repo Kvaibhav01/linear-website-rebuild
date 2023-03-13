@@ -1,14 +1,12 @@
 "use client";
 
 import { Features } from "../features";
-import {
-  AutomatedBacklogIcon,
-  CustomViewsIcon,
-  DiscussionIcon,
-  IssuesIcon,
-  ParentSubIcon,
-  WorkflowsIcon,
-} from "../icons/features";
+import { CustomRoadmapsIcon } from "../icons/features/set-directions-icons/custom-roadmaps";
+import { MultiTeamProjectsIcon } from "../icons/features/set-directions-icons/multi-team-projects";
+import { PersonalNotificationsIcon } from "../icons/features/set-directions-icons/personal-notifications";
+import { ProjectDocumentsIcon } from "../icons/features/set-directions-icons/project-documents";
+import { ProjectInsightsIcon } from "../icons/features/set-directions-icons/project-insights";
+import { TimelineViewIcon } from "../icons/features/set-directions-icons/timeline-view";
 
 export const SetDirection = () => {
   return (
@@ -28,32 +26,32 @@ export const SetDirection = () => {
       <Features.Grid
         features={[
           {
-            icon: ParentSubIcon,
+            icon: MultiTeamProjectsIcon,
             title: "Multi-team projects.",
             text: "Collaborate across teams and departments.",
           },
           {
-            icon: AutomatedBacklogIcon,
+            icon: ProjectDocumentsIcon,
             title: "Project documents.",
             text: "Write project briefs and specs directly in Linear.",
           },
           {
-            icon: WorkflowsIcon,
+            icon: CustomRoadmapsIcon,
             title: "Custom roadmaps.",
             text: "Organize projects across multiple roadmaps.",
           },
           {
-            icon: CustomViewsIcon,
+            icon: TimelineViewIcon,
             title: "Timeline view.",
             text: "Visualize the product journey ahead.",
           },
           {
-            icon: DiscussionIcon,
+            icon: ProjectInsightsIcon,
             title: "Project insights.",
             text: "Track scope, velocity, and progress over time.",
           },
           {
-            icon: IssuesIcon,
+            icon: PersonalNotificationsIcon,
             title: "Personal notifications.",
             text: "Stay in the loop on project activity and updates.",
           },

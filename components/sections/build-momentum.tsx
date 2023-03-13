@@ -1,14 +1,12 @@
 "use client";
 
 import { Features } from "../features";
-import {
-  AutomatedBacklogIcon,
-  CustomViewsIcon,
-  DiscussionIcon,
-  IssuesIcon,
-  ParentSubIcon,
-  WorkflowsIcon,
-} from "../icons/features";
+import { AutomaticTrackingIcon } from "../icons/features/build-momentum-icons/automatic-tracking";
+import { BePreparedIcon } from "../icons/features/build-momentum-icons/be-prepared";
+import { FullyConfigurableIcon } from "../icons/features/build-momentum-icons/fully-configurable";
+import { PredictDelaysIcon } from "../icons/features/build-momentum-icons/predict-delays";
+import { ScheduledIcon } from "../icons/features/build-momentum-icons/scheduled";
+import { ScopeCreepIcon } from "../icons/features/build-momentum-icons/scope-creep";
 
 export const BuildMomentum = () => {
   return (
@@ -28,32 +26,32 @@ export const BuildMomentum = () => {
       <Features.Grid
         features={[
           {
-            icon: ParentSubIcon,
+            icon: AutomaticTrackingIcon,
             title: "Automatic tracking.",
             text: "Any started issues are added to the current cycle.",
           },
           {
-            icon: AutomatedBacklogIcon,
+            icon: ScheduledIcon,
             title: "Scheduled.",
             text: "Unfinished work rolls over to the next cycle automatically.",
           },
           {
-            icon: WorkflowsIcon,
+            icon: FullyConfigurableIcon,
             title: "Fully configurable.",
             text: "Define start date, end date, duration, and more.",
           },
           {
-            icon: CustomViewsIcon,
+            icon: PredictDelaysIcon,
             title: "Predict delays.",
             text: "Get warnings for at-risk cycles.",
           },
           {
-            icon: DiscussionIcon,
+            icon: ScopeCreepIcon,
             title: "Scope creep.",
             text: "Understand which issues are added mid-cycle.",
           },
           {
-            icon: IssuesIcon,
+            icon: BePreparedIcon,
             title: "Be prepared.",
             text: "Schedule work in advance with upcoming cycles.",
           },
